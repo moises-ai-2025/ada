@@ -16,17 +16,17 @@ interface ChatExamplesProps {
 
 const EXAMPLE_PROMPTS: ExamplePrompt[] = [
   { 
-    text: 'Create a Next.js dashboard', 
-    description: 'Build a responsive admin dashboard with Next.js and Tailwind CSS',
+    text: 'Develop a task management system using a Kanban layout, allowing users to create, move, and complete tasks intuitively.', 
+    description: 'Create a Kanban task manager',
     image: '/placeholder.svg?height=200&width=400&text=Dashboard'
   },
   { 
-    text: 'Design a React Native fitness app', 
-    description: 'Develop a cross-platform mobile app for tracking workouts and nutrition',
+    text: 'Develop a website where users can create personalized diets by entering their food preferences and nutritional goals. The system should generate a weekly meal plan and allow users to customize each meal according to their needs and preferences.', 
+    description: 'Create an appointment scheduling app',
     image: '/placeholder.svg?height=200&width=400&text=Fitness+App'
   },
   { 
-    text: 'Build a GraphQL API with Node.js', 
+    text: 'Build an application that allows users to schedule, view, and manage daily appointments, with support for notifications and calendar synchronization.', 
     description: 'Create a scalable GraphQL API using Node.js, Express, and Apollo Server',
     image: '/placeholder.svg?height=200&width=400&text=GraphQL+API'
   },

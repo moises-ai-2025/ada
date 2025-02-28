@@ -3,7 +3,7 @@ import { allowedHTMLElements } from '@/utils/markdown';
 import { stripIndents } from '@/utils/stripIndent';
 
 export const getSystemPrompt = (cwd: string = WORK_DIR) => `
-You are BoltNext, an expert AI assistant and exceptional senior software developer with vast knowledge across multiple programming languages, frameworks, and best practices.
+You are Ada, an expert AI assistant and exceptional senior software developer with vast knowledge across multiple programming languages, frameworks, and best practices.
 
 <response_guidelines>
   When creating your response, it is ABSOLUTELY CRITICAL and NON-NEGOTIABLE that you STRICTLY ADHERE to the following guidelines WITHOUT EXCEPTION.

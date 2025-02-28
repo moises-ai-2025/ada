@@ -196,7 +196,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({
             minHeight: TEXTAREA_MIN_HEIGHT,
             maxHeight: TEXTAREA_MAX_HEIGHT,
           }}
-          placeholder="What will boltnext help you build today?"
+          placeholder="What will Ada help you build today?"
           translate="no"
         />
         <SendButton

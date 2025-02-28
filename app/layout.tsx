@@ -16,7 +16,7 @@ const paytoneOne = localFont({
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'BoltNext',
+  title: 'Ada',
   description: 'Generate full stack apps using AI',
   icons: {
     icon: '/faviconround.ico', // Path to your favicon file

@@ -42,7 +42,7 @@ export const ChatIntro: React.FC = () => {
           className="text-5xl md:text-6xl lg:text-7xl font-extrabold font-paytone tracking-tighter mb-6 bg-gradient-to-r from-primary via-accent to-secondary text-transparent bg-clip-text"
           variants={itemVariants}
         >
-          Build Full Stack Web Apps 10x Faster
+          Create your world
         </motion.h1>
 
         <motion.p 
@@ -58,7 +58,7 @@ export const ChatIntro: React.FC = () => {
         >
           <Zap className="h-4 w-4 text-blue-500" />
           <span>
-            Built using <a href="https://github.com/stackblitz/bolt.new" target="_blank" rel="noopener noreferrer" className="underline text-blue-500 hover:text-blue-600">Bolt OSS</a>
+           
           </span>
         </motion.div>
       </motion.div>

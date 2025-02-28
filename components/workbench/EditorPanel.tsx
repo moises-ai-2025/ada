@@ -228,7 +228,7 @@ export const EditorPanel = memo(
                           onClick={() => setActiveTerminal(index)}
                         >
                           <TerminalIcon className='text-lg'/>
-                          BoltNext
+                          Ada
                         </button>
                       ) : (
                         <React.Fragment>

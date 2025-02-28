@@ -40,7 +40,7 @@ export const Messages = React.forwardRef<HTMLDivElement, MessagesProps>((props: 
                   <div className="flex items-center justify-center w-[34px] h-[34px] overflow-hidden rounded-full shrink-0 self-start">
                     <Avatar className="h-full w-full ">
                         <AvatarImage src={""} alt={""} />
-                        <AvatarFallback className="">BN</AvatarFallback>
+                        <AvatarFallback className="">IP</AvatarFallback>
                     </Avatar>
                   </div>
                 )}

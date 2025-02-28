@@ -97,8 +97,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 
   const data = {
     user: {
-      name: "KevIsDev",
-      email: "madeby@kevisdev.tech",
+      name: "Izaias Pertrelly",
+      email: "pertrelly@inventu.com",
       avatar: "/replace-with-your-avatar.jpg",
     },
     navMain: [
@@ -288,9 +288,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               <a href="/" className="">
               <div>
                 <h1 className="font-paytone font-bold text-3xl tracking-tight flex gap-0.2 text-foreground/80">
-                  <span>BOLT</span>
+                  <span>Ada</span>
                   <span className="text-accent">.</span>
-                  <span className="ml-1">NEXT</span>
                 </h1>
               </div>
               </a>
