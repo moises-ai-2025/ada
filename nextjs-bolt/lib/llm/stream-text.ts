@@ -1,6 +1,8 @@
 import { google } from '@ai-sdk/google';
-import { createOpenAI } from "@ai-sdk/openai";
-import { anthropic } from '@ai-sdk/anthropic';
+// Removendo importações irrelevantes para Anthropic e Together, pois só Google será usado
+// import { createOpenAI } from "@ai-sdk/openai";
+// import { anthropic } from '@ai-sdk/anthropic';
+// import { together } from './custom-together'; // Removido, pois não será usado
 import { streamText as _streamText, convertToCoreMessages } from 'ai';
 import { MAX_TOKENS } from './constants';
 import { getSystemPrompt } from '@/lib/llm/prompts';
@@ -15,33 +17,21 @@ export interface ToolResult<Name extends string, Args, Result> {
 
 export type StreamingOptions = Omit<Parameters<typeof _streamText>[0], 'model'>;
 
-const together = createOpenAI({
-  apiKey: process.env.TOGETHER_API_KEY ?? "",
-  baseURL: "https://api.together.xyz/v1",
-});
-
-
 export function streamText({ messages, provider, ...options }: { messages: any, provider: Provider } & StreamingOptions) {
   const initialMessages = messages.slice(0, -1);
   const currentMessage = messages[messages.length - 1];
 
-  const image = currentMessage.data?.url; //Base64 image
+  const image = currentMessage.data?.url; // Base64 image
   console.log("messagesStreamImage:", image);
 
   let model;
 
-  switch (provider.type) {
-    case ProviderType.ANTHROPIC:
-      model = createOpenAI({ apiKey: process.env.ANTHROPIC_API_KEY ?? "" })(provider.model.id);
-      break;
-    case ProviderType.GOOGLE:
-      model = google(provider.model.id);
-      break;
-    case ProviderType.TOGETHER:
-      model = together(provider.model.id);
-      break;
-    default:
-      model = google("gemini-2.0-flash-thinking-exp-1219");
+  // Simplificando para suportar apenas Google
+  if (provider.type === ProviderType.GOOGLE) {
+    model = google(provider.model.id);
+  } else {
+    // Fallback para um modelo Google padrão, caso o tipo seja inválido (não deve ocorrer)
+    model = google("gemini-2.0-flash-thinking-exp-1219");
   }
 
   const content = [];
